@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Webpage!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="static/styles.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body id="main">
+        <div class="wrapper h-100">
+            <div class="container-fluid h-100">
+                <div class="row"  id="head">
+                    <div class="col">
+                        <a href=index.html><img src="p0logo.png" id="logo"></a>
+                        <header class="header">CS50W project0 - FPLdata</header>
+                    </div>
+                </div>                
+                <div class="row" id="bar">
+                    <div class="col">
+                        <header class="header">Site Info</header>
+                    </div>
+                    <div class="col">
+                        <header class="header">Leagues</header>
+                    </div>
+                </div>
+                <div class="row" id="content">
+                    <div class="col" id="content-left">                   
+                        <span id="text">
+                            A basic website that will display statistics from the <a href="https://fantasy.premierleague.com/">
+                            Fantasy Premier League</a> private leagues that I am involved in.<br>
+                            My final project for this course will be an upgraded version of this site once 
+                            I am more adept at web development. For now this will be a basic website using
+                            only HTML, CSS and SCSS
+                        </span>
+                    </div>
+                    <div class="col" id="content-right">
+                        <dl id="text">
+                            <dt><a href="classic.html">Craggy Island over-75's League</a></dt>
+                            <dd title="Ranked by total points">Classic League</dd>
+                            <dt><a href="h2h.html">Go on ................. My son</a></dt>
+                            <dd title="Ranked by one on one match-ups&#013Win=3pts, Draw=1pt, Loss=0pts">Head to Head League</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
