@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>360582</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="static/styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="static/team.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrapper h-100">
+        <div class="container-fluid h-100">
+            <div class="row" id="head">
+                <div class="col">
+                    <a href=index.html><img src="p0logo.png" id="logo"></a>
+                    <header class="header">CS50W project0 - FPLdata</header>
+                </div>
+            </div>
+            <div class="row" id="bar">
+                <div class="col">
+                    <header><a id="null">&#8826;&#8826; Previous Gameweek</a></header>
+                </div>
+                <div class="col">
+                    <header>All the Smallings - Gameweek 1</header>
+                </div>
+                <div class="col">
+                    <header><a href="#">Next Gameweek &#8827;&#8827;</a></header>
+                </div>
+            </div>
+            <div class="row flex-grow-1" id="content">
+                <div class="col-8" id="content-left">
+                    <div class="container-fluid" id="table">
+                        <table class="table table-borderless table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Team</th>
+                                    <th>Price(&poundm)</th>
+                                    <th>Points</th>
+                                    <th>Captain</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Patricio</td>
+                                    <td>GK</td>
+                                    <td>WOL</td>
+                                    <td>4.5</td>
+                                    <td>2</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Bryan</td>
+                                    <td>DEF</td>
+                                    <td>FUL</td>
+                                    <td>5.0</td>
+                                    <td>2</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Tarkowski</td>
+                                    <td>DEF</td>
+                                    <td>BUR</td>
+                                    <td>5.0</td>
+                                    <td>7</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Alexander-Arnold</td>
+                                    <td>DEF</td>
+                                    <td>LIV</td>
+                                    <td>5.0</td>
+                                    <td>5</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Salah</td>
+                                    <td>MID</td>
+                                    <td>LIV</td>
+                                    <td>13.0</td>
+                                    <td>16</td>
+                                    <td><span id="check">&#10004</span></td>
+                                </tr>
+                                <tr>
+                                    <td>De Bruyne</td>
+                                    <td>MID</td>
+                                    <td>MCI</td>
+                                    <td>10.0</td>
+                                    <td>0</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Neves</td>
+                                    <td>MID</td>
+                                    <td>WOL</td>
+                                    <td>5.0</td>
+                                    <td>12</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Sessegnon</td>
+                                    <td>MID</td>
+                                    <td>FUL</td>
+                                    <td>6.5</td>
+                                    <td>2</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Eriksen</td>
+                                    <td>MID</td>
+                                    <td>TOT</td>
+                                    <td>9.5</td>
+                                    <td>2</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Zaha</td>
+                                    <td>FWD</td>
+                                    <td>CRY</td>
+                                    <td>7.0</td>
+                                    <td>5</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Firmino</td>
+                                    <td>FWD</td>
+                                    <td>LIV</td>
+                                    <td>9.5</td>
+                                    <td>5</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Speroni</td>
+                                    <td>Sub GK</td>
+                                    <td>CRY</td>
+                                    <td>4.0</td>
+                                    <td>0</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Trippier</td>
+                                    <td>Sub 1</td>
+                                    <td>TOT</td>
+                                    <td>6.0</td>
+                                    <td>0</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Daniels</td>
+                                    <td>Sub 2</td>
+                                    <td>BOU</td>
+                                    <td>4.5</td>
+                                    <td>5</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Reid</td>
+                                    <td>Sub 3</td>
+                                    <td>CAR</td>
+                                    <td>5.5</td>
+                                    <td>2</td>
+                                    <td><span id="cross">&#10008</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-4" id="content-right">
+                    <div class="container-fluid" id="box">
+                        <div class="row">
+                            <header>Tom Kingett</header>
+                        </div>
+                        <div class="row h-100">
+                            <div class="container-fluid" id="sub">
+                                <span>
+                                    Gameweek Points: 58<br>
+                                    Classic Leagues:<br>
+                                    <ul>
+                                        <li><a href="classic.html">Craggy Island over-75's League</a></li>
+                                    </ul>
+                                    Head-to-Head Leagues:<br>
+                                    <ul>
+                                        <li><a href="h2h.html">Go on ................. My son</a></li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid" id="box">
+                        <div class="row">
+                            <header>Team Stats</header>
+                        </div>
+                        <div class="row h-100">
+                            <div class="container-fluid" id="sub">
+                                <span>
+                                    Goals: 3<br>
+                                    Assists: 2<br>
+                                    Clean Sheets: 2<br>
+                                    Saves: 3<br>
+                                    Goals Conceded: 3<br>
+                                    Yellow Cards: 3<br>
+                                    Red Cards: 0<br>
+                                    Own Goals: 0<br>
+                                    Penalties Saved: 0<br>
+                                    Penalties Missed: 0<br>
+                                    Bonus Points: 3<br>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
