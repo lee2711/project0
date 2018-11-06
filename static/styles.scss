@@ -1,0 +1,162 @@
+/*sass variables*/
+$color: #38003c;
+$border: 1px solid $color;
+
+html, body {
+    height: 100%;
+    width: 100%;
+    min-width: 500px;
+    background-color: #00FF87;
+}
+#main {
+    overflow: hidden;
+}
+.wrapper {
+    display: flex;
+    text-align: center;
+    font-family: Palatino Linotype;
+    background-color: $color;
+}
+#head {
+    height: 10%;
+    min-height: 60px;
+    background-color: $color;
+    color: #fff;
+    font-size: 2.8rem;
+}
+/* https://editor.freelogodesign.org/ */
+#logo {
+    position: absolute;
+    height: 150%;
+    left: 2%;
+    top: -30%;
+}
+/* Center all */
+.col, .col-8, .col-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-fluid {
+    margin: 10px;
+}
+#content {
+    min-height: 85%;
+    background-color: #00FF87;
+}
+#content-left {
+    border-right: $border;
+}
+#content-right {
+    border-left: $border;
+}
+/* sass nesting */
+#bar {
+    height: 5%;
+    min-height: 30px;
+    background-color: #fff;
+    font-size: 1.1rem;
+
+    .col {
+        padding: 0 !important;
+    }
+    .col:nth-child(1) {
+        border-right: $border;
+    }
+    .col:nth-child(2) {
+        border-left: $border;
+    }
+    .clean {
+        border-right: none !important;
+    }
+}
+#text {
+    font-weight: 700;
+    font-size: 1.5vw;
+    color: $color;
+}
+#table {
+    padding: 0;
+    width: 50%;
+    max-width: 50% !important;
+    
+    tbody tr :nth-child(n+2) {
+        border-left: $border;
+    }
+}
+#fixtures {
+    max-width: 40%;
+    
+    tbody tr :nth-child(2n-1){
+        width: 40%;
+    }
+}
+.table {
+    background-color: #fff !important;
+    word-wrap: break-word;
+    
+    td {
+        vertical-align: middle !important;
+        font-size: 1rem;
+    }
+    td:nth-child(6) {
+        padding: 0.2rem;
+    }
+    thead {
+        background-color: $color !important;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+}
+/*sass inheritance*/
+%mark {
+    font-size: 1.3rem;
+}
+#check {
+    @extend %mark;
+    color: rgb(0, 255, 0);
+}
+#cross {
+    @extend %mark;
+    color: red;
+}
+/* responsive */
+@media (max-width: 1410px) {
+    .col {
+      flex-direction: column;
+    }
+    #content {
+        height: auto;
+        width: auto;
+    }
+    #main {
+        overflow: auto;
+
+        #table {
+            min-width: 750px;
+        }
+        #fixtures {
+            max-width: 50%;
+            min-width: 425px;
+        }
+        #table , #fixtures {
+
+            th, td {
+            padding: 0.2rem;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    
+    #bar {
+        font-size: 0.7rem;
+    }
+    #head {
+        display: none;
+        height: 0%;
+    }
+    #text {
+        font-size: 2vw;
+    }
+} 

@@ -1,0 +1,61 @@
+$color: #38003c;
+$border: 1px solid $color;
+
+/* additional styling for teamsheets only */
+
+#table {
+    width: 75% !important;
+    max-width: 75% !important;
+}
+#bar {
+    .col:nth-child(2) {
+        border-right: $border;
+    }
+    .col:nth-child(3) {
+        border-left: $border;
+    }
+}
+#content-right {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#box {
+    background-color: #fff;
+    width: 75%;
+    height: 20%;
+    margin: 10%;
+    font-size: 1.2vw;
+    padding: 0;
+    
+    .row {
+    margin: 0;
+    }
+    header {
+    width: 100%;
+    border-bottom: 2px solid #000;
+    background-color: lightgrey;
+    }
+}
+#sub {
+    text-align: left;
+    font-size: 1vw;
+    height: 81.5%;
+    overflow-y: auto;
+    margin: 0;
+
+    ul {
+        margin: 0;
+    }
+}
+#null {
+    color: rgb(190, 190, 190);
+}
+@media (max-width: 992px) {
+    #content-right {
+        display: none;
+        width: 0%;
+    }
+    #content-left {        
+        border-right: none;
+    }
+}

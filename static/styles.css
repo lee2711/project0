@@ -1,0 +1,182 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  min-width: 500px;
+  background-color: #00FF87;
+}
+
+#main {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-family: Palatino Linotype;
+  background-color: #38003c;
+}
+
+#head {
+  height: 10%;
+  min-height: 60px;
+  background-color: #38003c;
+  color: #fff;
+  font-size: 2.8rem;
+}
+
+#logo {
+  position: absolute;
+  height: 150%;
+  left: 2%;
+  top: -30%;
+}
+
+.col, .col-8, .col-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-fluid {
+  margin: 10px;
+}
+
+#content {
+  min-height: 85%;
+  background-color: #00FF87;
+}
+
+#content-left {
+  border-right: 1px solid #38003c;
+}
+
+#content-right {
+  border-left: 1px solid #38003c;
+}
+
+#bar {
+  height: 5%;
+  min-height: 30px;
+  background-color: #fff;
+  font-size: 1.1rem;
+}
+
+#bar .col {
+  padding: 0 !important;
+}
+
+#bar .col:nth-child(1) {
+  border-right: 1px solid #38003c;
+}
+
+#bar .col:nth-child(2) {
+  border-left: 1px solid #38003c;
+}
+
+#bar .clean {
+  border-right: none !important;
+}
+
+#text {
+  font-weight: 700;
+  font-size: 1.5vw;
+  color: #38003c;
+}
+
+#table {
+  padding: 0;
+  width: 50%;
+  max-width: 50% !important;
+}
+
+#table tbody tr :nth-child(n+2) {
+  border-left: 1px solid #38003c;
+}
+
+#fixtures {
+  max-width: 40%;
+}
+
+#fixtures tbody tr :nth-child(2n-1) {
+  width: 40%;
+}
+
+.table {
+  background-color: #fff !important;
+  word-wrap: break-word;
+}
+
+.table td {
+  vertical-align: middle !important;
+  font-size: 1rem;
+}
+
+.table td:nth-child(6) {
+  padding: 0.2rem;
+}
+
+.table thead {
+  background-color: #38003c !important;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#check, #cross {
+  font-size: 1.3rem;
+}
+
+#check {
+  color: lime;
+}
+
+#cross {
+  color: red;
+}
+
+@media (max-width: 1410px) {
+  .col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #content {
+    height: auto;
+    width: auto;
+  }
+  #main {
+    overflow: auto;
+  }
+  #main #table {
+    min-width: 750px;
+  }
+  #main #fixtures {
+    max-width: 50%;
+    min-width: 425px;
+  }
+  #main #table th, #main #table td, #main #fixtures th, #main #fixtures td {
+    padding: 0.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  #bar {
+    font-size: 0.7rem;
+  }
+  #head {
+    display: none;
+    height: 0%;
+  }
+  #text {
+    font-size: 2vw;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
