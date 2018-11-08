@@ -11,7 +11,7 @@ TODO
 #           Try "git add ." (only adds new and altered files)
 #           Try a merge
 #           Download submit50 or the other way
-    Add static/ to all teamsheet logo img's
+    Check for font-size: relevent to div
     Change the hiding of head to be height instead of width (or both ?)
     Use one or two more css selector types e.g. :hover and p > div / p + div
         Maybe make prev GW a :disabled
