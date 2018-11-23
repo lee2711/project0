@@ -4,8 +4,11 @@ $border: 1px solid $color;
 /* additional styling for teamsheets only */
 
 #table {
-    width: 75% !important;
-    max-width: 75% !important;
+    width: 85% !important;
+    max-width: 85% !important;
+}
+.table {
+    display: table !important;
 }
 #bar {
     .col:nth-child(2) {
@@ -47,13 +50,51 @@ $border: 1px solid $color;
         margin: 0;
     }
 }
+/* bootstrap component */
+.modal {   
+    
+    .modal-content {
+        background-color: $color;
+    }
+
+    .close {
+        color: #fff;
+        opacity: 1;
+    }
+    .close:hover {
+        color: #fff !important;
+    }
+    .modal-header, .btn{
+        background-color: $color;
+        color: #fff;
+    }
+    .modal-body, .modal-footer {
+        background-color: #fff;
+    }
+    .btn:hover {
+        opacity: .8;
+    }
+}
+/* invalid link */
 #null {
     color: rgb(190, 190, 190);
 }
-@media (max-width: 992px) {
-    #content-right {
-        display: none;
-        width: 0%;
+@media (max-width: 1024px) {
+    
+    .hidden {
+
+        #box {
+            height: 55%;
+            width: 90%;
+            font-size: 3.2vw;
+        }
+        #sub {
+            font-size: 2.2vw;
+            
+            ul {
+                padding-left: 10px;
+            }
+        }
     }
     #content-left {        
         border-right: none;

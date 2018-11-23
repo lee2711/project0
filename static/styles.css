@@ -1,13 +1,7 @@
 /*sass variables*/
 html, body {
   height: 100%;
-  width: 100%;
-  min-width: 500px;
   background-color: #00FF87;
-}
-
-#main {
-  overflow: hidden;
 }
 
 .wrapper {
@@ -17,6 +11,9 @@ html, body {
   text-align: center;
   font-family: Palatino Linotype;
   background-color: #38003c;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #head {
@@ -24,7 +21,7 @@ html, body {
   min-height: 60px;
   background-color: #38003c;
   color: #fff;
-  font-size: 250%;
+  font-size: 3vw;
 }
 
 /* https://editor.freelogodesign.org/ */
@@ -65,10 +62,15 @@ html, body {
   border-left: 1px solid #38003c;
 }
 
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
 /* sass nesting */
 #bar {
   height: 5%;
-  min-height: 30px;
+  min-height: 40px;
   background-color: #fff;
   font-size: 100%;
 }
@@ -93,6 +95,7 @@ html, body {
   font-weight: 700;
   font-size: 140%;
   color: #38003c;
+  margin: 10px;
 }
 
 #table {
@@ -103,6 +106,11 @@ html, body {
 
 #table tbody tr :nth-child(n+2) {
   border-left: 1px solid #38003c;
+}
+
+#table tbody :hover {
+  background-color: #343a40;
+  color: #fff;
 }
 
 #fixtures {
@@ -147,52 +155,96 @@ html, body {
 }
 
 /* responsive */
-@media (max-width: 1410px) {
+@media (max-width: 1220px) {
   .col {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  #content {
-    height: auto;
-    width: auto;
+  #table {
+    min-width: 95% !important;
   }
   #main {
     overflow: auto;
   }
-  #main #table {
-    min-width: 750px;
-  }
   #main #fixtures {
-    max-width: 50%;
-    min-width: 425px;
+    min-width: 90%;
   }
   #main #table th, #main #table td, #main #fixtures th, #main #fixtures td {
     padding: 0.2rem;
   }
 }
 
+@media (max-width: 1024px) {
+  .hidden {
+    visibility: visible;
+    display: block;
+  }
+  .home #bar .col:last-child {
+    display: none;
+  }
+  #content {
+    height: auto;
+    width: auto;
+  }
+  #content-right {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
+  #head {
+    font-size: 4vw;
+  }
   #bar {
-    font-size: 80%;
+    font-size: 2vw;
+    min-height: 45px;
   }
   #text {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }
 
 @media (max-width: 680px) {
-  #head {
-    display: none;
-    height: 0%;
+  #logo {
+    height: 100%;
   }
 }
 
-@media (max-height: 300px) {
+@media (max-width: 585px) {
+  #fixtures th, #table th, #fixtures td, #table td {
+    padding: 0.25rem !important;
+  }
   #head {
-    display: none;
-    height: 0%;
+    font-size: 6vw;
+  }
+  #bar {
+    min-height: 35px;
+    font-size: 2.4vw;
+  }
+  #text {
+    font-size: 4vw;
+  }
+  #fixtures th, #table th {
+    font-size: 3.2vw;
+  }
+  #fixtures td, #table td {
+    font-size: 2.8vw;
+  }
+  #check, #cross {
+    font-size: 2.8vw;
+  }
+}
+
+@media (max-width: 420px) {
+  #bar {
+    font-size: 3vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */

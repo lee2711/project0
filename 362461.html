@@ -9,6 +9,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="static/team.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -25,16 +31,16 @@
                     <header><a id="null">&#8826;&#8826; Previous Gameweek</a></header>
                 </div>
                 <div class="col">
-                    <header>Whydoidothistomyself - Gameweek 1</header>
+                    <header>Whydoidothistomyself<br>Gameweek 1</header>
                 </div>
                 <div class="col">
                     <header><a href="#">Next Gameweek &#8827;&#8827;</a></header>
                 </div>
             </div>
             <div class="row flex-grow-1" id="content">
-                <div class="col-8" id="content-left">
+                <div class="col-12 col-xl-8" id="content-left">
                     <div class="container-fluid" id="table">
-                        <table class="table table-borderless table-striped">
+                        <table class="table table-borderless table-striped table-responsive-sm">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -169,6 +175,62 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="container-fluid hidden">
+                        <div class="row">
+                            <div class="col">
+                                <div class="container-fluid" id="box">
+                                    <div class="row">
+                                        <header>Michael Condra</header>
+                                    </div>
+                                    <div class="row h-100">
+                                        <div class="container-fluid" id="sub">
+                                            <span>
+                                                Gameweek Points: 41<br>
+                                                Classic Leagues:<br>
+                                                <ul>
+                                                    <li>
+                                                        <a href="classic.html">Craggy Island over-75's League</a>
+                                                        <span class="dropdown-toggle" data-toggle="modal" data-target="#classicModal"></span>
+                                                    </li>
+                                                </ul>
+                                                Head-to-Head Leagues:<br>
+                                                <ul>
+                                                    <li>
+                                                        <a href="h2h.html">Go on ................. My son</a>
+                                                        <span class="dropdown-toggle" data-toggle="modal" data-target="#h2hModal"></span>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="container-fluid" id="box">
+                                    <div class="row">
+                                        <header>Team Stats</header>
+                                    </div>
+                                    <div class="row h-100">
+                                        <div class="container-fluid" id="sub">
+                                            <span>
+                                                Goals: 1<br>
+                                                Assists: 1<br>
+                                                Clean Sheets: 2<br>
+                                                Saves: 3<br>
+                                                Goals Conceded: 3<br>
+                                                Yellow Cards: 1<br>
+                                                Red Cards: 0<br>
+                                                Own Goals: 0<br>
+                                                Penalties Saved: 0<br>
+                                                Penalties Missed: 0<br>
+                                                Bonus Points: 1<br>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-4" id="content-right">
                     <div class="container-fluid" id="box">
@@ -181,11 +243,17 @@
                                     Gameweek Points: 41<br>
                                     Classic Leagues:<br>
                                     <ul>
-                                        <li><a href="classic.html">Craggy Island over-75's League</a></li>
+                                        <li>
+                                            <a href="classic.html">Craggy Island over-75's League</a>
+                                            <span class="dropdown-toggle" data-toggle="modal" data-target="#classicModal"></span>
+                                        </li>
                                     </ul>
                                     Head-to-Head Leagues:<br>
                                     <ul>
-                                        <li><a href="h2h.html">Go on ................. My son</a></li>
+                                        <li>
+                                            <a href="h2h.html">Go on ................. My son</a>
+                                            <span class="dropdown-toggle" data-toggle="modal" data-target="#h2hModal"></span>
+                                        </li>
                                     </ul>
                                 </span>
                             </div>
@@ -213,6 +281,57 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="classicModal" tabindex="-1" role="dialog" aria-labelledby="title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="title">Craggy Island over-75's League</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol>
+                        <li><a href="355374.html">Enter Shaqiri</a></li>
+                        <li><a href="360582.html">All the Smallings</a></li>
+                        <li><a href="353525.html">Up Her Arsenal</a></li>
+                        <li>Whydoidothistomyself</li>
+                        <li><a href="354784.html">Fr. Romeo Sensini</a></li>
+                        <li><a href="355107.html">Ctrl Alt De Leat</a></li>
+                        <li><a href="4733259.html">Shawly A Good Idea</a></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn" href="classic.html">View League</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="h2hModal" tabindex="-1" role="dialog" aria-labelledby="title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="title">Go on ................. My son</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol>
+                        <li><a href="355374.html">Enter Shaqiri</a></li>
+                        <li><a href="360582.html">All the Smallings</a></li>
+                        <li>Whydoidothistomyself</li>
+                        <li><a href="353525.html">Up Her Arsenal</a></li>
+                        <li><a href="354784.html">Fr. Romeo Sensini</a></li>
+                        <li><a href="355107.html">Ctrl Alt De Leat</a></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn" href="h2h.html">View League</a>
                 </div>
             </div>
         </div>

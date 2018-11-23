@@ -4,25 +4,21 @@ $border: 1px solid $color;
 
 html, body {
     height: 100%;
-    width: 100%;
-    min-width: 500px;
     background-color: #00FF87;
-}
-#main {
-    overflow: hidden;
 }
 .wrapper {
     display: flex;
     text-align: center;
     font-family: Palatino Linotype;
     background-color: $color;
+    justify-content: center;
 }
 #head {
     height: 10%;
     min-height: 60px;
     background-color: $color;
     color: #fff;
-    font-size: 250%;
+    font-size: 3vw;
 }
 /* https://editor.freelogodesign.org/ */
 #logo {
@@ -50,10 +46,14 @@ html, body {
 #content-right {
     border-left: $border;
 }
+.hidden {
+    visibility: hidden;
+    display: none;
+}
 /* sass nesting */
 #bar {
     height: 5%;
-    min-height: 30px;
+    min-height: 40px;
     background-color: #fff;
     font-size: 100%;
 
@@ -74,6 +74,7 @@ html, body {
     font-weight: 700;
     font-size: 140%;
     color: $color;
+    margin: 10px;
 }
 #table {
     padding: 0;
@@ -82,6 +83,10 @@ html, body {
     
     tbody tr :nth-child(n+2) {
         border-left: $border;
+    }
+    tbody :hover {
+        background-color: #343a40;
+        color: #fff;
     }
 }
 #fixtures {
@@ -121,23 +126,21 @@ html, body {
     color: red;
 }
 /* responsive */
-@media (max-width: 1410px) {
+@media (max-width:1220px) {
+
     .col {
       flex-direction: column;
-    }
-    #content {
-        height: auto;
-        width: auto;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }    
+    #table {
+        min-width: 95% !important;
     }
     #main {
         overflow: auto;
 
-        #table {
-            min-width: 750px;
-        }
         #fixtures {
-            max-width: 50%;
-            min-width: 425px;
+            min-width: 90%;
         }
         #table , #fixtures {
 
@@ -147,26 +150,75 @@ html, body {
         }
     }
 }
+@media (max-width: 1024px) {
+
+    .hidden {
+        visibility: visible;
+        display: block;
+    }
+    .home #bar .col:last-child {
+        display: none;
+    }
+    #content {
+        height: auto;
+        width: auto;
+    }
+    #content-right {
+        display: none;
+    }
+}
 @media (max-width: 992px) {
 
+    #head {
+        font-size: 4vw;
+    }
     #bar {
-        font-size: 80%;
+        font-size: 2vw;
+        min-height: 45px;
     }
     #text {
-        font-size: 2vw;
+        font-size: 3vw;
     }
-} 
+}
 @media (max-width: 680px) {    
 
-    #head {
-        display: none;
-        height: 0%;
+    #logo {
+        height: 100%;
     }    
 }
-@media (max-height: 300px) {
+@media (max-width: 585px) {    
+
+    %padding {        
+        padding: 0.25rem !important;
+    }
 
     #head {
-        display: none;
-        height: 0%;
+        font-size: 6vw;
+    }
+    #bar {
+        min-height: 35px;
+        font-size: 2.4vw;
+    }
+    #text {
+        font-size: 4vw;
+    }
+    #fixtures, #table {
+
+        th {
+            @extend %padding;
+            font-size: 3.2vw;
+        }
+        td {
+            @extend %padding;
+            font-size: 2.8vw;
+        }
+    }
+    %mark {
+        font-size: 2.8vw;
+    } 
+}
+@media (max-width: 420px) {
+    #bar {
+        font-size: 3vw;
     }
 }

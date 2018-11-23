@@ -1,7 +1,11 @@
 /* additional styling for teamsheets only */
 #table {
-  width: 75% !important;
-  max-width: 75% !important;
+  width: 85% !important;
+  max-width: 85% !important;
+}
+
+.table {
+  display: table !important;
 }
 
 #bar .col:nth-child(2) {
@@ -53,14 +57,49 @@
   margin: 0;
 }
 
+/* bootstrap component */
+.modal .modal-content {
+  background-color: #38003c;
+}
+
+.modal .close {
+  color: #fff;
+  opacity: 1;
+}
+
+.modal .close:hover {
+  color: #fff !important;
+}
+
+.modal .modal-header, .modal .btn {
+  background-color: #38003c;
+  color: #fff;
+}
+
+.modal .modal-body, .modal .modal-footer {
+  background-color: #fff;
+}
+
+.modal .btn:hover {
+  opacity: .8;
+}
+
+/* invalid link */
 #null {
   color: #bebebe;
 }
 
-@media (max-width: 992px) {
-  #content-right {
-    display: none;
-    width: 0%;
+@media (max-width: 1024px) {
+  .hidden #box {
+    height: 55%;
+    width: 90%;
+    font-size: 3.2vw;
+  }
+  .hidden #sub {
+    font-size: 2.2vw;
+  }
+  .hidden #sub ul {
+    padding-left: 10px;
   }
   #content-left {
     border-right: none;
