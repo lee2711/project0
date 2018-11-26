@@ -119,7 +119,7 @@ html, body {
 }
 #check {
     @extend %mark;
-    color: rgb(0, 255, 0);
+    color: red;
 }
 #cross {
     @extend %mark;
